@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Art Gallery</h1>
+        <p>Explore our collection of contemporary art</p>
+        <button id="theme-toggle">Dark Theme</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/exhibition.html">Exhibitions</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a id="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="art-gallery">
+        <h2>Art Gallery</h2>
+        <div class="items">
+            <div class="gallery-item">
+                <div class="img-block">
+                    <img src="img/Mona.jpg" width="200" height="250" alt="Artwork 1">
+                </div>
+                <h3>Artwork 1</h3>
+                <p><b>Artist:</b> Leonardo da Vinci</p>
+                <p><b>Description:</b> The painting has been traditionally considered to depict the Italian noblewoman Lisa del Giocondo..</p>
+            </div>
+            <div class="gallery-item">
+                <div class="img-block">
+                    <img src="img/girl.jpg" width="200" height="250" alt="Artwork 2">
+                </div>
+                <h3>Artwork 2</h3>
+                <p><b>Artist:</b> Johannes Vermeer </p>
+                <p><b>Description:</b> It depicts a European girl wearing "exotic dress", an "oriental turban", and what appears to be a very large pearl as an earring..</p>
+            </div>
+            <div class="gallery-item">
+                <div class="img-block">
+                    <img src="Mona.jpg" width="200" height="250" alt="Artwork 1">
+                </div>
+                <h3>Artwork 1</h3>
+                <p><b>Artist:</b> Leonardo da Vinci</p>
+                <p><b>Description:</b> The painting has been traditionally considered to depict the Italian noblewoman Lisa del Giocondo..</p>
+            </div>
+            <div class="gallery-item">
+                <div class="img-block">
+                    <img src="girl.jpg" width="200" height="250" alt="Artwork 2">
+                </div>
+                <h3>Artwork 2</h3>
+                <p><b>Artist:</b> Johannes Vermeer </p>
+                <p><b>Description:</b> It depicts a European girl wearing "exotic dress", an "oriental turban", and what appears to be a very large pearl as an earring..</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <div id="popupWindow" class="popup-window" style="display: none;">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h1>Contact Us</h1>
+      
+          <section class="contact">
+            <div class="contact-info">
+              <h2>Contact Information</h2>
+              <p>Email: contact@modernartexhibition.com</p>
+              <p>Phone: +1 (123) 456-7890</p>
+              <p>Address: 123 Art Street, City, Country</p>
+            </div>
+            <div class="contact-form">
+              <h3>Send us a message:</h3>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <button>Submit</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    <footer>
+        <p>&copy; 2023 Art Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
