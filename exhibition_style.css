@@ -13,6 +13,8 @@ body, h1, h2, p, section, iframe {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
   }
   
   header {
@@ -24,33 +26,45 @@ body, h1, h2, p, section, iframe {
   header h1 {
     font-size: 24px;
   }
-
+  
   .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
   }
   
   .exhibition {
     background-color: #fff;
-    margin: 20px;
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
     max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-
+  
   .exhibition h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.exhibition p {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-iframe {
-  width: 100%;
-  height: 250px;
-}
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .exhibition p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+  
+  /* Adjustments for responsiveness and layout */
+  
+  /* Section for more space between content and bottom of the page */
+  section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
