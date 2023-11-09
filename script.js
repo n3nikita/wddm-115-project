@@ -24,3 +24,19 @@ document.addEventListener("mousemove", (e) => {
   const y = (e.clientY / window.innerHeight) * 255;
   header.style.color = `rgb(${x}, ${y}, 150)`;
 });
+
+const galleryItems = document.querySelectorAll(".gallery-item img");
+galleryItems.forEach((img) => {
+  img.addEventListener("click", () => {
+    const isZoomed = img.classList.contains("zoomed");
+    galleryItems.forEach((i) => i.classList.remove("zoomed"));
+    if (isZoomed) {
+      document
+        .querySelector(".gallery-overlay")
+        .classList.remove("show-overlay");
+    } else {
+      img.classList.add("zoomed");
+      document.querySelector(".gallery-overlay").classList.add("show-overlay");
+    }
+  });
+});
