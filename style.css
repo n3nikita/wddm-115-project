@@ -2,26 +2,48 @@
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
+  background-color: rgba(135, 206, 250, 0.723);
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333; /* Set a default text color */
+  background-color: rgba(135, 206, 250, 0.723);
+  color: rgba(40, 43, 44, 0.723); /* Set a default text color */
   line-height: 1.6; /* Improved readability with line height */
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color:rgba(135, 206, 250, 0.723);
+  color:  rgba(40, 43, 44, 0.723);
+  text-align: center;
+  padding: 20px 0;
+  background-image: url('Bacgground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color:rgba(135, 206, 250, 0.723);
+  color:  rgba(40, 43, 44, 0.723);
   text-align: center;
   padding: 20px 0;
 }
 
+header img {
+  display: block;
+  margin: 0 auto;
+}
+
+h1, p {
+  margin: 0;
+}
+
 nav {
-  background-color: #333;
+  background-color:rgba(51, 119, 161, 0.723);
   text-align: center;
   padding: 10px 0;
+  
 }
 
 nav ul {
@@ -37,7 +59,7 @@ nav ul li {
 }
 
 nav a {
-  color: #fff;
+  color: rgba(40, 43, 44, 0.723);
   text-decoration: none;
 }
 
@@ -48,15 +70,12 @@ section {
 }
 
 .featured-artwork {
-justify-content: center;
-  background-color: #fff;
+  justify-content: center;
+  background-color: rgba(83, 154, 198, 0.723);
   margin: 20px 0;
   border: 1px solid #ddd;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-}
-
-.featured-artwork img {
   max-width: 100%;
   height: auto; /* Ensure image responsiveness */
   display: block; /* Prevent extra space beneath images */
@@ -75,16 +94,16 @@ justify-content: center;
 .upcoming-exhibitions li {
   flex: 1;
   margin: 0 10px;
-  background-color: #fff;
+  background-color:rgba(83, 154, 198, 0.723);
   border: 1px solid #ddd;
-  text-align: center;
+  justify-content: center;
   padding: 20px;
   max-width: 300px; /* Set a maximum width for consistent sizing */
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: rgba(51, 119, 161, 0.723);
+  color: rgba(40, 43, 44, 0.723);
   text-align: center;
   padding: 20px 0; /* Adjusting top/bottom padding */
 }

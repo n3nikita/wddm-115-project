@@ -68,3 +68,27 @@ body, h1, h2, p, section, iframe {
     margin-bottom: 20px;
   }
   
+nav {
+  background-color:rgba(135, 206, 250, 0.723);
+  text-align: center;
+  padding: 10px 0;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Improved spacing between items */
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+  
