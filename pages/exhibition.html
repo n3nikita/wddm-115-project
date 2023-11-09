@@ -4,41 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Art Exhibition</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #948f8f;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
         }
 
         h1 {
             margin: 0;
-        }
-
-        nav {
-            background-color:#948f8f;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 20px;
         }
 
         .featured-artwork {
@@ -50,19 +25,6 @@
             width: 300px;
             height: 350px;
             border: 2px solid #333;
-        }
-
-        .upcoming-exhibitions {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .exhibition {
-            display: inline-block;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .exhibition h2 {
@@ -89,29 +51,35 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Modern Art Exhibition</h1>
-        <p>Explore the world of contemporary art</p>
+        <h1>Welcome to the Art Gallery</h1>
+        <p>Explore our collection of contemporary art</p>
+        <button id="theme-toggle">Dark Theme</button>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html"><b>Home</b></a></li>
-            <li><a href="pages/exhibition.html"><b>Exhibitions</b></a></li>
-            <li><a href="pages/gallery.html"><b>Gallery</b></a></li>
-            <li><a href="contact.html"><b>Contact</b></a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Exhibitions</a></li>
+            <li><a href="../pages/gallery.html">Gallery</a></li>
+            <li><a id="contact-btn">Contact</a></li>
         </ul>
     </nav>
 
     <section class="featured-artwork">
         <h2>Featured Artwork</h2>
         <div class="artwork">
-            <img src="img/Gogh.jpg" alt="Artwork Title">
+            <img src="../img/Gogh.jpg" alt="Artwork Title">
             <p>Artist:Vincent van Gogh </p>
             <p>Description: The artist wrote of his experience to his brother Theo: "This morning I saw the country from my window a long time before sunrise, with nothing but the morning star, which looked very big." This morning star, or Venus, may be the large white star just left of center in The Starry Night..</p>
         </div>
     </section>
 
-    <section class="upcoming-exhibitions">
+    <div class="upcoming-button">
+        <button id="show-upcoming">Show Upcoming Exhibitions</button>
+    </div>
+
+
+    <section class="upcoming-exhibitions" id="upcoming" style="display: none;">
         <h2>Upcoming Exhibitions</h2>
         <div class="exhibition">
             <h2>Exhibition Title 1</h2>
@@ -125,8 +93,7 @@
             <p>Venue: Modern Art Center</p>
             <p>Date: February 20, 2023</p>
             <p>Time: 11:00 AM - 6:00 PM</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2246846816615!2d-79.53779771502492!3d43.6434934785626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b379f18f2ad85%3A0x533c30ad8671e807!2s5191%20Dundas%20St%20W%2C%20Toronto%2C%20ON%20M9A%200B2!5e0!3m2!1sen!2sca!4v1699477223350!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.9117200577316!2d-79.75436962423527!3d43.712383648601644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b16080e37c4c3%3A0x46ddebd4b51e4018!2s30%20Olive%20Ct%2C%20Brampton%2C%20ON%20L6V%203G4!5e0!3m2!1sen!2sca!4v1699541841796!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
         <div class="exhibition">
             <h2>Exhibition Title 3</h2>
             <p>Venue: Contemporary Art Museum</p>
@@ -136,8 +103,36 @@
         </div>
     </section>
 
+    <div id="popupWindow" class="popup-window" style="display: none;">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h1>Contact Us</h1>
+      
+          <section class="contact">
+            <div class="contact-info">
+              <h2>Contact Information</h2>
+              <p>Email: contact@modernartexhibition.com</p>
+              <p>Phone: +1 (123) 456-7890</p>
+              <p>Address: 123 Art Street, City, Country</p>
+            </div>
+            <div class="contact-form">
+              <h3>Send us a message:</h3>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <button>Submit</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
     <footer>
         <p>&copy; 2023 Modern Art Exhibition</p>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

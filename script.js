@@ -30,6 +30,21 @@ theme.addEventListener("click", (e) => {
   }
 });
 
+const upcomingBtn = document.getElementById("show-upcoming");
+const upcomingSection = document.getElementById("upcoming");
+
+if (upcomingBtn) {
+  upcomingBtn.addEventListener("click", (e) => {
+    if (upcomingBtn.innerHTML == "Show Upcoming Exhibitions") {
+      upcomingSection.style.display = "block";
+      upcomingBtn.innerHTML = "Hide Upcoming Exhibitions";
+    } else {
+      upcomingSection.style.display = "none";
+      upcomingBtn.innerHTML = "Show Upcoming Exhibitions";
+    }
+  });
+}
+
 const header = document.querySelector("header");
 header.addEventListener("mousemove", (e) => {
   const x = (e.clientX / window.innerWidth) * 100;
