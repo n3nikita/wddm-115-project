@@ -181,7 +181,6 @@ footer {
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
-  cursor: pointer;
 }
 
 .popup-content {
@@ -193,6 +192,7 @@ footer {
   color: black;
   padding: 20px;
   z-index: 3;
+  border-radius: 20px;
 }
 
 .close-btn {
