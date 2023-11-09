@@ -1,21 +1,16 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
+* {
   margin: 0;
   padding: 0;
-  background-color: rgba(102, 98, 98, 0.723); /* White background */
-  color: #000; /* Black text color */
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #b8b5b5; /* Grey background */
-  color: #fff; /* White text color */
-  line-height: 1.6;
+  background-color: #f0f0f0;
 }
 
 header {
   background-color: #3b3b3b; /* Grey background */
-  color: #fff; /* White text color */
+  color: #fff;
   text-align: center;
   padding: 20px 0;
 }
@@ -25,12 +20,8 @@ header img {
   margin: 0 auto;
 }
 
-h1, p {
-  margin: 0;
-}
-
 nav {
-  background-color: #807c7c; /* Black background for the navigation bar */
+  background-color: #807c7c;
   text-align: center;
   padding: 10px 0;
 }
@@ -60,9 +51,9 @@ section {
 
 .featured-artwork {
   justify-content: center;
-  background-color: #918e8e; /* Grey background */
-  margin: 20px 0;
-  border: 1px solid #ddd;
+  background-color: #ffffff; /* Grey background */
+  margin: 20px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(152, 151, 151, 0.1);
   max-width: 100%;
@@ -83,8 +74,8 @@ section {
 .upcoming-exhibitions li {
   flex: 1;
   margin: 0 10px;
-  background-color: #948f8f; /* Grey background */
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 10px;
   justify-content: center;
   padding: 20px;
   max-width: 300px;
@@ -92,7 +83,13 @@ section {
 
 footer {
   background-color: #3b3b3b; /* Black background for the footer */
-  color: rgb(255, 255, 255)606; /* White text color */
+  color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+.artwork {
+  text-align: center;
+  display: auto;
+  justify-content: center;
 }
