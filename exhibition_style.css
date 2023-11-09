@@ -1,94 +1,102 @@
 /* Reset some default styles */
-body, h1, h2, p, section, iframe {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    font-size: 24px;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-  }
-  
-  .exhibition {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    max-width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .exhibition h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .exhibition p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  iframe {
-    width: 100%;
-    height: 250px;
-  }
-  
-  /* Adjustments for responsiveness and layout */
-  
-  /* Section for more space between content and bottom of the page */
-  section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
+body, h1, h2, p, ul, li, iframe {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(135, 206, 250, 0.723);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(135, 206, 250, 0.723);
+  color: rgba(40, 43, 44, 0.723);
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(135, 206, 250, 0.723);
+  color: rgba(40, 43, 44, 0.723);
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* Navigation bar styles */
 nav {
-  background-color:rgba(135, 206, 250, 0.723);
+  background-color: rgba(51, 119, 161, 0.723);
   text-align: center;
   padding: 10px 0;
-  
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Improved spacing between items */
+  gap: 20px;
   padding: 0;
 }
 
-nav ul li {
+nav li {
   display: inline;
 }
 
 nav a {
-  color: #fff;
+  color: rgba(40, 43, 44, 0.723);
   text-decoration: none;
 }
-  
+
+/* Placeholder background image styles */
+.background-image {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-image: url('placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.exhibition {
+  background-color: rgba(83, 154, 198, 0.723);
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.exhibition p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+}
+
+/* Section for more space between content and bottom of the page */
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
