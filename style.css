@@ -7,28 +7,33 @@ body, h1, h2, p, ul, li {
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  color: #333; /* Set a default text color */
+  line-height: 1.6; /* Improved readability with line height */
 }
 
 header {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 nav {
   background-color: #333;
   text-align: center;
+  padding: 10px 0;
 }
 
 nav ul {
   list-style: none;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Improved spacing between items */
+  padding: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 10px;
 }
 
 nav a {
@@ -38,23 +43,32 @@ nav a {
 
 section {
   padding: 20px;
+  margin: 0 auto; /* Center content in section */
+  max-width: 1200px; /* Set a max-width for better readability */
 }
 
 .featured-artwork {
   background-color: #fff;
-  margin: 20px;
+  margin: 20px 0;
   border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
 
 .featured-artwork img {
   max-width: 100%;
+  height: auto; /* Ensure image responsiveness */
+  display: block; /* Prevent extra space beneath images */
 }
 
 .upcoming-exhibitions ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  margin: 20px;
+  justify-content: center; /* Center align the items */
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  padding: 20px;
+  margin: 0;
 }
 
 .upcoming-exhibitions li {
@@ -63,13 +77,13 @@ section {
   background-color: #fff;
   border: 1px solid #ddd;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  max-width: 300px; /* Set a maximum width for consistent sizing */
 }
 
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px 0; /* Adjusting top/bottom padding */
 }
-
