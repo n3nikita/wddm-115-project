@@ -37,6 +37,7 @@ nav a {
   padding: 10px;
   color: white;
   text-decoration: none;
+  font-weight: normal;
 }
 
 nav a:hover {
@@ -53,7 +54,7 @@ section {
 
 .featured-artwork {
   justify-content: center;
-  background-color: #ffffff; /* Grey background */
+  background-color: #ffffff;
   margin: 20px;
   border-radius: 20px;
   padding: 20px;
@@ -84,7 +85,7 @@ section {
 }
 
 footer {
-  background-color: #3b3b3b; /* Black background for the footer */
+  background-color: #3b3b3b;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -100,7 +101,6 @@ footer {
   display: flex;
 }
 
-/* Add this to your CSS file */
 .gallery-item {
   position: relative;
   width: 300px;
@@ -112,16 +112,15 @@ footer {
 }
 
 .zoomed {
-  transform: scale(2); /* Adjust scale value as needed */
-  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-  z-index: 10; /* Ensure the zoomed image is above other elements */
-  position: fixed; /* Overlay on top of other elements */
+  transform: scale(2);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(2); /* Center and zoom image */
+  transform: translate(-50%, -50%) scale(2);
 }
 
-/* Optional: Add an overlay background when an image is zoomed */
 .gallery-overlay {
   position: fixed;
   top: 0;
@@ -133,7 +132,6 @@ footer {
   display: none;
 }
 
-/* Show the overlay when an image is zoomed */
 .show-overlay {
   display: block;
 }
