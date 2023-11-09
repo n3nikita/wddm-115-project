@@ -99,3 +99,35 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme header, .dark-theme nav, .dark-theme footer {
+  background-color: #1a1a1a;
+}
+
+.dark-theme nav a, .dark-theme #theme-toggle {
+  color: #e0e0e0;
+}
+
+.dark-theme #theme-toggle {
+  background-color: #262626;
+}
+
+.dark-theme .featured-artwork, .dark-theme .upcoming-exhibitions li {
+  background-color: #262626;
+  border-color: #333;
+}
+
+#theme-toggle {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
