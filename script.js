@@ -1,14 +1,32 @@
 // Use at least 15 selectors to update elements within Javascript
 // Use at least 5 mouse events
 
+function loadThemePreference() {
+  const savedTheme = localStorage.getItem("theme");
+  const themeToggleButton = document.getElementById("theme-toggle");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    themeToggleButton.textContent = "Light Theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+    themeToggleButton.textContent = "Dark Theme";
+  }
+}
+
+// Set the theme on page load
+document.addEventListener("DOMContentLoaded", loadThemePreference);
+
 const theme = document.getElementById("theme-toggle");
 theme.addEventListener("click", (e) => {
   document.body.classList.toggle("dark-theme");
   const themeToggleButton = document.getElementById("theme-toggle");
   if (document.body.classList.contains("dark-theme")) {
     themeToggleButton.textContent = "Light Theme";
+    localStorage.setItem("theme", "dark");
   } else {
     themeToggleButton.textContent = "Dark Theme";
+    localStorage.setItem("theme", "light");
   }
 });
 
