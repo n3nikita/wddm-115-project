@@ -58,3 +58,19 @@ galleryItems.forEach((img) => {
     }
   });
 });
+
+const popupWindow = document.getElementById("popupWindow");
+const closeBtn = document.querySelector(".close-btn");
+
+document.getElementById("contact-btn").addEventListener("click", (e) => {
+  popupWindow.style.display = "block";
+});
+closeBtn.addEventListener("click", (e) => {
+  popupWindow.style.display = "none";
+});
+
+window.onclick = function (event) {
+  if (event.target === popupWindow) {
+    closePopup();
+  }
+};
