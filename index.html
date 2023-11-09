@@ -5,28 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Art Exhibition</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .featured-artwork {
+            text-align: center; /* Center align the content within the section */
+        }
+
+        .artwork {
+            display: flex; /* Make the artwork div an inline block */
+            justify-content: center;
+            align-items: center;/* Reset text alignment for the content within the artwork div */
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header >
+        <img src="Bacgground.jpg" >
         <h1>Welcome to the Modern Art Exhibition</h1>
         <p>Explore the world of contemporary art</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Artists</a></li>
-            <li><a href="#">Exhibitions</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exhibition.html">Exhibitions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <section class="featured-artwork">
         <h2>Featured Artwork</h2>
         <div class="artwork">
-            <img src="artwork.jpg" alt="Artwork Title">
-            <p>Artist: Artist Name</p>
+            <img src ="saggu.jpeg" alt="Artwork Title" width="300" height="350" align >
+            <p>Artist: Kunwarpreet (saggu)</p>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </section>
@@ -35,19 +46,19 @@
         <h2>Upcoming Exhibitions</h2>
         <ul>
             <li>
-                <img src="exhibition1.jpg" alt="Exhibition Title">
-                <h3>Exhibition Title 1</h3>
-                <p>Date: Date 1</p>
+                <img src="Potrait.jpeg" alt="Exhibition Title" width="300" height="350">
+                <h3>Potrait Of Zillardo</h3>
+                <p>Date: January 15, 2023</p>
             </li>
             <li>
-                <img src="exhibition2.jpg" alt="Exhibition Title">
-                <h3>Exhibition Title 2</h3>
-                <p>Date: Date 2</p>
+                <img src="ancient.jpeg" alt="Exhibition Title" width="300" height="350">
+                <h3>Ancient Inspiration</h3>
+                <p>Date: February 20, 2023</p>
             </li>
             <li>
-                <img src="exhibition3.jpg" alt="Exhibition Title">
-                <h3>Exhibition Title 3</h3>
-                <p>Date: Date 3</p>
+                <img src="Stranger thing.jpeg" alt="Exhibition Title" width="300" height="350">
+                <h3>Stranger things villan</h3>
+                <p>Date: March 25, 2023</p>
             </li>
         </ul>
     </section>
