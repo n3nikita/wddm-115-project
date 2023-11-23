@@ -78,6 +78,7 @@ galleryItems.forEach((img) => {
 
 const popupWindow = document.getElementById("popupWindow");
 const closeBtn = document.querySelector(".close-btn");
+const submitBtn = document.querySelector(".contact-form button");
 
 document.getElementById("contact-btn").addEventListener("click", (e) => {
   popupWindow.style.display = "block";
@@ -86,8 +87,13 @@ closeBtn.addEventListener("click", (e) => {
   popupWindow.style.display = "none";
 });
 
+submitBtn.addEventListener("click", (e) => {
+  alert("Thank you for your submission!");
+  popupWindow.style.display = "none";
+});
+
 window.onclick = function (event) {
   if (event.target === popupWindow) {
-    closePopup();
+    popupWindow.style.display = "none";
   }
 };
