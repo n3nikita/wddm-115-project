@@ -47,18 +47,18 @@ if (upcomingBtn) {
   });
 }
 
-const header = document.querySelector("header");
-header.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth) * 100;
-  const y = (e.clientY / window.innerHeight) * 100;
-  header.style.backgroundImage = `radial-gradient(at ${x}% ${y}%, rgb(27 27 27), rgb(0 0 0))`;
-});
+// const header = document.querySelector("header");
+// header.addEventListener("mousemove", (e) => {
+//   const x = (e.clientX / window.innerWidth) * 100;
+//   const y = (e.clientY / window.innerHeight) * 100;
+//   header.style.backgroundImage = `radial-gradient(at ${x}% ${y}%, rgb(27 27 27), rgb(0 0 0))`;
+// });
 
-document.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth) * 255;
-  const y = (e.clientY / window.innerHeight) * 255;
-  header.style.color = `rgb(${x}, ${y}, 150)`;
-});
+// document.addEventListener("mousemove", (e) => {
+//   const x = (e.clientX / window.innerWidth) * 255;
+//   const y = (e.clientY / window.innerHeight) * 255;
+//   header.style.color = `rgb(${x}, ${y}, 150)`;
+// });
 
 const galleryItems = document.querySelectorAll(".gallery-item img");
 galleryItems.forEach((img) => {
