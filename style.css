@@ -127,7 +127,7 @@ footer {
 .gallery-item {
   position: relative;
   width: 208px;
-  border: 4px solid black;
+  border: 5px solid black;
 }
 
 .img-block {
