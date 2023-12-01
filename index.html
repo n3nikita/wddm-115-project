@@ -7,51 +7,146 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Modern Art Exhibition</h1>
-        <p>Explore the world of contemporary art</p>
-        <button id="theme-toggle">Dark Theme</button>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/exhibition.html">Exhibitions</a></li>
-            <li><a href="pages/gallery.html">Gallery</a></li>
-            <li><a id="contact-btn">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section class="upcoming-exhibitions">
-        <ul>
-            <li class="exhibition-item" data-aos="zoom-in" data-aos-delay="50">
-                <img src="img/DOBI.jpeg" alt="DOBI" width="300" height="350">
-                <h3>DOBI</h3>
-                <p><b>Date: January 15, 2023</b></p>
-            </li>
-            <li data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/Demon.jpeg" alt="Demon" width="300" height="350">
-                <h3>Demon</h3>
-                <p><b>Date: February 20, 2023</b></p>
-            </li>
-            <li data-aos="zoom-in" data-aos-delay="150">
-                <img src="img/Kill man.jpeg" alt="Killer" width="300" height="350">
-                <h3>Killer</h3>
-                <p><b>Date: March 25, 2023</b></p>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2 align=center>Featured Artwork</h2>
-        <div class="artwork">
-            <img src ="img/saggu.jpeg" alt="Artwork Title" width="300" height="350" align >
-            <p>Artist: Kunwarpreet Saggu</p>
-            <p>Description: Art is all about looking things from different angels.</p>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/exhibition.html">Exhibitions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/gallery.html">Gallery</a>
+              </li>
+            </ul>
+            <d class="d-flex gap-2">
+              <button class="btn btn-outline-secondary" id="contact-btn">Contact</button>
+              <button class="btn btn-outline-success" id="theme-toggle"></button>
+            </d>
+          </div>
         </div>
-    </section>
+      </nav>
+    <div class="container">
+        <div class="row full d-flex justify-content-center align-items-center">
+            <div class="col container">
+                <h1>Welcome to the Modern Art Exhibition</h1>
+                <p>Explore the world of contemporary art</p>
+                <button class="btn btn-outline-success" id="theme-toggle">Dark Theme</button>
+            </div>
+            <div class="col">
+                <img src="img/art.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card text-bg-dark art-card-main">
+                    <img src="img/Mona.jpg" class="card-img">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <h5 class="card-title mt-auto">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.</p>
+                        <p class="card-text"><small>Author Name | 1999</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark art-card-main">
+                    <img src="img/girl.jpg" class="card-img">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <h5 class="card-title mt-auto">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.</p>
+                        <p class="card-text"><small>Author Name | 1999</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark art-card-main">
+                    <img src="https://www.singulart.com/blog/wp-content/uploads/2023/09/Portrait-of-Dr.-Gachet-1890.jpg" class="card-img">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <h5 class="card-title mt-auto">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer.</p>
+                        <p class="card-text"><small>Author Name | 1999</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container mt-5">
+        <h3>Latest news</h3>
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">News Title 1</h1>
+              <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+              <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            </div>
+          </div>
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+              <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h2>News Title</h2>
+                <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                <button class="btn btn-outline-light" type="button">Example button</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                <h2>Add borders</h2>
+                <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                <button class="btn btn-outline-secondary" type="button">Example button</button>
+              </div>
+            </div>
+          </div>
+        <h3 class="mt-5">Tickets pricing</h3>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center d-flex justify-content-center align-items-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Visitor</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Artist</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>20 users included</li>
+                    <li>10 GB of storage</li>
+                    <li>Priority email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
 
     <div id="popupWindow" class="popup-window" style="display: none;">
         <div class="popup-content">
@@ -83,6 +178,7 @@
         <p>&copy; 2023 Modern Art Exhibition</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
