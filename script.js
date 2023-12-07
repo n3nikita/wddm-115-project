@@ -1,12 +1,28 @@
 AOS.init();
 
 $(document).ready(function () {
-  $("div.card").click(function () {
-    $(this).fadeOut(1000);
+  $("div.card").hover(function () {
+    $(this).toggleClass("animate__animated animate__tada");
   });
 
   $("#pricing-button").click(function () {
-    $("#pricing").fadeToggle(1000);
+    $("#pricing").fadeToggle();
+  });
+
+  $(".main-text").hover(function () {
+    $(this).toggleClass("animate__animated animate__shakeX");
+  });
+
+  $("#fake-theme-toggle").click(function () {
+    $(this).addClass("animate__animated animate__hinge");
+  });
+
+  $("#main-image").click(function () {
+    $(this).toggleClass("animate__animated animate__swing");
+  });
+
+  $(".news-button").click(function () {
+    $(this).addClass("animate__animated animate__hinge");
   });
 });
 
