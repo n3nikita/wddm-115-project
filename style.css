@@ -360,3 +360,7 @@ footer {
 .full { 
   height: 100vh;
 }
+
+#pricing-button {
+  margin: 20px 0;
+}

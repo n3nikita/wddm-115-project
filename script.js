@@ -1,7 +1,14 @@
 AOS.init();
 
-// Use at least 15 selectors to update elements within Javascript
-// Use at least 5 mouse events
+$(document).ready(function () {
+  $("div.card").click(function () {
+    $(this).fadeOut(1000);
+  });
+
+  $("#pricing-button").click(function () {
+    $("#pricing").fadeToggle(1000);
+  });
+});
 
 function loadThemePreference() {
   const savedTheme = localStorage.getItem("theme");
