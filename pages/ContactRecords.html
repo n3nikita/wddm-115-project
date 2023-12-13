@@ -5,14 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Records</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Add any necessary styles or external CSS files here -->
 </head>
 
 <body>
-    <h1>Contact Records</h1>
-    <ul id="contact-list">
-        <!-- The contact records will be displayed here using JavaScript -->
-    </ul>
+    <div class="container mt-5">
+        <h1>Contact Records</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="contact-list">
+                <!-- The contact records will be displayed here using JavaScript -->
+            </tbody>
+        </table>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -22,12 +34,12 @@
 
                 if (contacts !== null) {
                     contacts.forEach(function (contact) {
-                        // Display the contact data in a list item
-                        $('#contact-list').append('<li>Name: ' + contact.name + ', Email: ' + contact.email + ', Message: ' + contact.message + '</li>');
+                        // Display the contact data in table rows
+                        $('#contact-list').append('<tr><td>' + contact.name + '</td><td>' + contact.email + '</td><td>' + contact.message + '</td></tr>');
                     });
                 } else {
                     // Show a message if there are no contacts stored
-                    $('#contact-list').append('<li>No contact records found</li>');
+                    $('#contact-list').append('<tr><td colspan="3">No contact records found</td></tr>');
                 }
             }
 
