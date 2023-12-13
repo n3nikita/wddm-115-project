@@ -264,6 +264,10 @@
             contacts.push(contact);
             localStorage.setItem('contacts', JSON.stringify(contacts));
         }
+        // Clear form fields after submission
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
     });
    </script>
 </body>
