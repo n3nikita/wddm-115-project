@@ -237,7 +237,12 @@
          }).mouseout(function () {
            $(this).animate({ padding: '20px' }, 'fast');
          });
-
+         <!-- Add this script at the end of your HTML file, after other script tags -->
+         
+         // Function to handle form submission
+    $('.submit-btn').on('click', function(e) {
+        e.preventDefault();
+    });
    </script>
 </body>
 
