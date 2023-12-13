@@ -252,6 +252,18 @@
             email: email,
             message: message
         };
+        // Check if local storage already has contact data
+        if(localStorage.getItem('contacts') === null) {
+            // If not, create an empty array and add the current contact
+            var contacts = [];
+            contacts.push(contact);
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+        } else {
+            // If exists, retrieve the contacts, add the current contact, and update the local storage
+            var contacts = JSON.parse(localStorage.getItem('contacts'));
+            contacts.push(contact);
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+        }
     });
    </script>
 </body>
