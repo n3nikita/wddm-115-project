@@ -15,6 +15,26 @@
     </ul>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function displayContacts() {
+                var contacts = JSON.parse(localStorage.getItem('contacts'));
+
+                if (contacts !== null) {
+                    contacts.forEach(function (contact) {
+                        // Display the contact data in a list item
+                        $('#contact-list').append('<li>Name: ' + contact.name + ', Email: ' + contact.email + ', Message: ' + contact.message + '</li>');
+                    });
+                } else {
+                    // Show a message if there are no contacts stored
+                    $('#contact-list').append('<li>No contact records found</li>');
+                }
+            }
+
+            // Call the function to display contacts when the page loads
+            displayContacts();
+        });
+    </script>
 </body>
 
 </html>
