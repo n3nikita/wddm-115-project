@@ -240,19 +240,22 @@
          <!-- Add this script at the end of your HTML file, after other script tags -->
          
          $(document).ready(function() {
-         // Function to handle form submission
+            // Function to handle form submission
             $('.submit-btn').on('click', function(e) {
                 e.preventDefault();
+        
                 // Get form values
                 var name = $('#name').val();
                 var email = $('#email').val();
                 var message = $('#message').val();
+        
                 // Create an object to store form data
                 var contact = {
                     name: name,
                     email: email,
                     message: message
                 };
+        
                 // Check if local storage already has contact data
                 if(localStorage.getItem('contacts') === null) {
                     // If not, create an empty array and add the current contact
@@ -265,14 +268,17 @@
                     contacts.push(contact);
                     localStorage.setItem('contacts', JSON.stringify(contacts));
                 }
+        
                 // Clear form fields after submission
                 $('#name').val('');
                 $('#email').val('');
                 $('#message').val('');
-                //message sent alert
-                alert('Message sent!');
 
+                // For example, show a success message
+                alert('Message sent!');
             });
+        
+            // Function to display stored contacts (on a different page or section)
             function displayContacts() {
                 var contacts = JSON.parse(localStorage.getItem('contacts'));
         
