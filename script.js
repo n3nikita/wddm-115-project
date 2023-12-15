@@ -1,6 +1,22 @@
 AOS.init();
 
 $(document).ready(function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (!savedTheme) {
+    localStorage.setItem("theme", "light");
+    savedTheme = "light";
+  }
+  setTheme(savedTheme);
+
+  $("#theme-toggle").click(function () {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+
   $("div.card").hover(function () {
     $(this).toggleClass("animate__animated animate__tada");
   });
@@ -26,34 +42,17 @@ $(document).ready(function () {
   });
 });
 
-function loadThemePreference() {
-  const savedTheme = localStorage.getItem("theme");
-  const themeToggleButton = document.getElementById("theme-toggle");
-
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-theme");
-    themeToggleButton.textContent = "Light Theme";
+function setTheme(theme) {
+  if (theme === "light") {
+    $("#theme-toggle").text("Light Theme");
+    $("body").attr("data-bs-theme", "light");
+    localStorage.setItem("theme", "light");
   } else {
-    document.body.classList.remove("dark-theme");
-    themeToggleButton.textContent = "Dark Theme";
+    $("#theme-toggle").text("Dark Theme");
+    $("body").attr("data-bs-theme", "dark");
+    localStorage.setItem("theme", "dark");
   }
 }
-
-// Set the theme on page load
-document.addEventListener("DOMContentLoaded", loadThemePreference);
-
-const theme = document.getElementById("theme-toggle");
-theme.addEventListener("click", (e) => {
-  document.body.classList.toggle("dark-theme");
-  const themeToggleButton = document.getElementById("theme-toggle");
-  if (document.body.classList.contains("dark-theme")) {
-    themeToggleButton.textContent = "Light Theme";
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeToggleButton.textContent = "Dark Theme";
-    localStorage.setItem("theme", "light");
-  }
-});
 
 const upcomingBtn = document.getElementById("show-upcoming");
 const upcomingSection = document.getElementById("upcoming");
@@ -69,19 +68,6 @@ if (upcomingBtn) {
     }
   });
 }
-
-// const header = document.querySelector("header");
-// header.addEventListener("mousemove", (e) => {
-//   const x = (e.clientX / window.innerWidth) * 100;
-//   const y = (e.clientY / window.innerHeight) * 100;
-//   header.style.backgroundImage = `radial-gradient(at ${x}% ${y}%, rgb(27 27 27), rgb(0 0 0))`;
-// });
-
-// document.addEventListener("mousemove", (e) => {
-//   const x = (e.clientX / window.innerWidth) * 255;
-//   const y = (e.clientY / window.innerHeight) * 255;
-//   header.style.color = `rgb(${x}, ${y}, 150)`;
-// });
 
 const galleryItems = document.querySelectorAll(".gallery-item img");
 galleryItems.forEach((img) => {
