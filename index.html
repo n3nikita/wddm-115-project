@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body data-bs-theme="light">
+<body data-bs-theme="dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -154,7 +154,7 @@
                                 <li>Subscribe to receive notifications about upcoming exhibitions.</li>
                                 <li>Email newsletters with updates and highlights.</li>
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#signupModal" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                                 <li>Participate in live Q&A sessions with artists or curators.</li>
                                 <li>Exclusive virtual tours or behind-the-scenes content.</li>
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#signupModal" class="w-100 btn btn-lg btn-primary">Get started</button>
                         </div>
                     </div>
                 </div>
@@ -207,6 +207,45 @@
             </section>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" id="signupModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign up for exhibition</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Sign up for the art exhibition features an enthusiastic artist eagerly filling out a registration form at a brightly decorated booth, surrounded by colorful banners showcasing various art styles
+                </p>
+                <div class="input-group my-3">
+                    <span class="input-group-text">First and last name</span>
+                    <input id="first" type="text" aria-label="First name" class="form-control">
+                    <input id="surname" type="text" aria-label="Last name" class="form-control">
+                </div>
+                <div class="input-group flex-nowrap my-3">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input id="instagram" type="text" class="form-control" placeholder="Instagram Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group">
+                    <input id="email" type="text" class="form-control" placeholder="Humber Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@humber.ca</span>
+                </div>
+                <div class="input-group flex-nowrap my-3">
+                    <span class="input-group-text" id="addon-wrapping">+1</span>
+                    <input id="phone" type="number" class="form-control" placeholder="Phone Number"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="signupbtn" type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
 
     <footer>
         <p>&copy; 2023 Modern Art Exhibition</p>
