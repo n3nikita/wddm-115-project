@@ -40,6 +40,22 @@ $(document).ready(function () {
   $(".news-button").click(function () {
     $(this).addClass("animate__animated animate__hinge");
   });
+
+  $("#signupbtn").click(function () {
+    var firstName = $("#first").val();
+    var lastName = $("#surname").val();
+    var instagramUsername = $("#instagram").val();
+    var email = $("#email").val();
+    var phoneNumber = $("#phone").val();
+
+    localStorage.setItem("firstName", firstName);
+    localStorage.setItem("lastName", lastName);
+    localStorage.setItem("instagramUsername", instagramUsername);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phoneNumber", phoneNumber);
+
+    alert("Form data saved!");
+  });
 });
 
 function setTheme(theme) {
