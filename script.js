@@ -45,17 +45,57 @@ $(document).ready(function () {
     var firstName = $("#first").val();
     var lastName = $("#surname").val();
     var instagramUsername = $("#instagram").val();
-    var email = $("#email").val();
+    var email = $("#humberemail").val();
     var phoneNumber = $("#phone").val();
+    var exhibition = $("#exhibition").val();
 
-    localStorage.setItem("firstName", firstName);
-    localStorage.setItem("lastName", lastName);
-    localStorage.setItem("instagramUsername", instagramUsername);
-    localStorage.setItem("email", email);
-    localStorage.setItem("phoneNumber", phoneNumber);
+    localStorage.setItem("First Name", firstName);
+    localStorage.setItem("Last Name", lastName);
+    localStorage.setItem("Instagram Username", instagramUsername);
+    localStorage.setItem("Email", email + "@humber.ca");
+    localStorage.setItem("Phone Number", "+1" + phoneNumber);
+    localStorage.setItem("Exhibition", exhibition);
 
     alert("Form data saved!");
+    displayUserData();
   });
+
+  function createDataCard(label, data) {
+    return `
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${label}</h5>
+                    <p class="card-text">${data}</p>
+                </div>
+            </div>
+        </div>
+    `;
+  }
+
+  function displayUserData() {
+    var userDataHTML = "<h2 class='mb-3'>You have been siged up!</h2>";
+
+    var dataItems = [
+      "Exhibition",
+      "First Name",
+      "Last Name",
+      "Instagram Username",
+      "Email",
+      "Phone Number",
+    ];
+
+    dataItems.forEach(function (item) {
+      var data = localStorage.getItem(item);
+      if (data) {
+        userDataHTML += createDataCard(item, data);
+      }
+    });
+
+    $("#userData").html(userDataHTML);
+  }
+
+  displayUserData();
 });
 
 function setTheme(theme) {
